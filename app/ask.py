@@ -32,7 +32,7 @@ def ask():
             response = client.models.generate_content(model=modeL, contents=question)
             dt = time.perf_counter() - t0
             u = response.usage_metadata
-            rows.append([model, q, round(dt, 2), u.prompt_token_count,
+            rows.append([model, question, round(dt, 2), u.prompt_token_count,
                          u.candidates_token_count, u.total_token_count, "ok"])
 
     # TODO(Lecture 01 exercise): use response.usage_metadata to
