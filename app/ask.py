@@ -11,7 +11,7 @@ or gives a plausible general answer (which differs from the actual course).
 """
 
 import argparse
-
+import os, time, csv
 from google import genai
 from google.genai import errors
 
@@ -21,25 +21,32 @@ from app.config import MODEL, api_error_message, get_api_key
 DEFAULT_QUESTION = "What are the 3 homework levels in the AIE2026 course?"
 
 
-def ask(question: str) -> str:
+def ask():
+    MODELS = ["gemini-3.5-flash-lite", "gemini-3.8-flash"]
+    QUESTIONS = ["What is LoRA?", "Explain overfitting in two sentences."]
     client = genai.Client(api_key=get_api_key())
-    response = client.models.generate_content(model=MODEL, contents=question)
+    rows = []
+    for model in MODELS:
+        for question in QUESTIONS:
+            t0 = time.perf_counter()
+            response = client.models.generate_content(model=modeL, contents=question)
+            dt = time.perf_counter() - t0
+            u = response.usage_metadata
+            rows.append([model, q, round(dt, 2), u.prompt_token_count,
+                         u.candidates_token_count, u.total_token_count, "ok"])
 
     # TODO(Lecture 01 exercise): use response.usage_metadata to
     #   display input and output token counts (you may ask Copilot)
-
-    return response.text
+    with open("results.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["model", "question", "seconds", "prompt_tok", "output_tok", "total_tok", "status"])
+        w.writerows(rows)
+    return "analysis generated"
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Ask a bare LLM a question")
-    parser.add_argument("question", nargs="?", default=DEFAULT_QUESTION)
-    args = parser.parse_args()
-
-    print(f"[model] {MODEL}")
-    print(f"[question] {args.question}\n")
     try:
-        print(ask(args.question))
+        print(ask())
     except errors.APIError as e:
         print(api_error_message(e.code, e.message))
         raise SystemExit(1)
