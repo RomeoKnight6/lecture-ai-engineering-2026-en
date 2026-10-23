@@ -13,9 +13,9 @@
 
 - Level attempted: Advanced ,Basic, Implementation, 
 - What you did:
-  - Basic: ran "What is LoRA?" 3 times on each of gemini-3.5-flash-lite and gemini-3.8-flash (`python -m app.ask basic`).
-  - Implementation: added a chat mode to `app/ask.py` using `client.chats.create`, which keeps the history for follow-up questions (`python -m app.ask implementation`).
-  - Advanced: timed each call and printed token counts for 2 questions on 2 models. Saved in `results.csv` (`python -m app.ask advanced`).
+  - Basic: ran "What is LoRA?" 3 times on each of gemini-3.5-flash-lite and gemini-3.8-flash (`uv run python -m app.ask basic`).
+  - Implementation: added a chat mode to `app/ask.py` using `client.chats.create`, which keeps the history for follow-up questions (`uv run python -m app.ask implementation`).
+  - Advanced: timed each call and printed token counts for 2 questions on 2 models. Saved in `results.csv` (`uv run python -m app.ask advanced`).
 - Results:
 
 ### Basic
