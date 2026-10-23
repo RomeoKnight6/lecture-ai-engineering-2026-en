@@ -44,5 +44,6 @@ Chat mode with history worked. I asked 3 questions in one session:
   - gemini-3.8-flash took 18-49 s per call; gemini-3.5-flash-lite took 1-3 s.
   - Output length was similar on both models, so the time difference is not from output length.
   - The short "two sentences" question used far fewer output tokens than the LoRA question on both models.
-  - 3.8-flash total tokens (1718, 407) are much higher than input + output (840, 54).
+  - gemini-3.8-flash total tokens (1718, 407) are much higher than input + output (840, 54).
+  - gemini-3.8-flash used about 2x to 7x more tokens than flash-lite (1718 vs 754, 407 vs 61), so it would hit free-tier token limits much sooner.
  
