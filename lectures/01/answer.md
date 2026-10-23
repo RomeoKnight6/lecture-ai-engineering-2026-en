@@ -40,7 +40,7 @@ Chat mode with history worked. I asked 3 questions in one session:
 | gemini-3.8-flash | What is LoRA? | 49.03 | 6 | 834 | 1718 |
 | gemini-3.8-flash | Explain overfitting in two sentences. | 17.68 | 7 | 47 | 407 |
 
-- Observations and questions:
+- Observations:
   - gemini-3.8-flash took 18-49 s per call; gemini-3.5-flash-lite took 1-3 s.
   - Output length was similar on both models, so the time difference is not from output length.
   - The short "two sentences" question used far fewer output tokens than the LoRA question on both models.
