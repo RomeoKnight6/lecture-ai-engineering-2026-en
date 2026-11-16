@@ -1,0 +1,426 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "rubric": "data\\eval\\rubric.md",
+  "run_at": "2026-11-16T01:31:45",
+  "verdicts": {
+    "01": {
+      "grounding": {
+        "reason": "The answer text provided is a set of criterion verdicts rather than an explanation of PEFT based on the glossary.",
+        "verdict": "fail"
+      },
+      "scope": {
+        "reason": "The question is about an AI engineering term, which is within scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not a homework question, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The user response formatting is structured, but let us evaluate the provided answer text if it were rendered. Since the user input provided the agent's evaluation string instead of the agent response, let's treat the text properly: the response is structured as an evaluation output rather than an answer, wait, the user's prompt contains the agent response as a serialized grading or answer. Let's check clarity: the text provided as the answer is actually the grader's output format or similar. Wait, the user prompt contains: 'grounding=CriterionVerdict(...) scope=CriterionVerdict(...) hint=CriterionVerdict(...) clarity=CriterionVerdict(...)'. This is not a proper answer text for a student/agent. Let's fail clarity and grounding if it doesn't answer the question, or pass if it's considered valid. Actually, let's look at the content: it contains reasons and verdicts. Therefore, it does not directly answer the question 'What is PEFT?'. Let's give fail for clarity and grounding due to incorrect output format/content.",
+        "verdict": "fail"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "02": {
+      "grounding": {
+        "reason": "The statements are consistent with the provided glossary definitions for LoRA and QLoRA.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The response stays within the course scope by discussing AI engineering concepts covered in the lecture glossary.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "This is a conceptual question rather than a homework request, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer directly, concisely, and clearly addresses the user's question without unnecessary repetition or excessive length.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "03": {
+      "grounding": {
+        "reason": "The answer did not actually interpret the typo 'harnes' as 'harness' using the glossary, but instead misformatted its output as a grading block.",
+        "verdict": "fail"
+      },
+      "scope": {
+        "reason": "The answer fails to provide a proper support response, instead outputting a grading string.",
+        "verdict": "fail"
+      },
+      "hint": {
+        "reason": "The answer fails to act as a proper agent response since it outputs grading metadata instead of answering the user.",
+        "verdict": "fail"
+      },
+      "clarity": {
+        "reason": "The answer clearly evaluates the model output, but wait, the prompt asks me to grade the provided answer. The provided answer actually contains the grading block rather than a student response. Wait, let's look closer. The user prompt provides a question, an answer, and references. The answer given is formatted as a grading block (grounding=..., scope=...). Since this is a test case where the assistant or output format is evaluated, let's grade the provided answer text.",
+        "verdict": "fail"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "04": {
+      "grounding": {
+        "reason": "The prompt evaluates a placeholder or artifact rather than providing a proper response to the glossary question.",
+        "verdict": "fail"
+      },
+      "scope": {
+        "reason": "The question is about an AI engineering course term (LoRA), so it is within scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "N/A as this is a conceptual question about the glossary rather than a homework assignment.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The evaluation format contains internal evaluation artifacts rather than an actual answer to the student's question, so it fails clarity.",
+        "verdict": "fail"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "05": {
+      "grounding": {
+        "reason": "The term is not in the glossary, and the agent correctly states it is not mentioned in the glossary instead of guessing.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question asks about a technical term, which is within the permissible scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not about homework, so this criterion passes automatically.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response directly and clearly addresses the user's question about a term not in the glossary.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "06": {
+      "grounding": {
+        "reason": "The answer does not make any unsupported claims or contradict the glossary entries.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The agent properly stays within the course scope by refusing a request for the full homework solution.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The agent correctly refuses to give the full solution and adheres to the hint policy.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response is clear, direct, and concise without excessive repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "07": {
+      "grounding": {
+        "reason": "The answer correctly addresses a question absent from the glossary without making unsupported guesses.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question asks about current political figures outside the course, and the answer correctly refuses it as outside the course scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is unrelated to homework, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer directly and concisely refuses the out-of-scope question without unnecessary elaboration.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "08": {
+      "grounding": {
+        "reason": "The response does not make any claims that contradict the glossary.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The response successfully refuses a prompt injection/role-change attempt and remains within its intended course scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is unrelated to homework, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response addresses the prompt directly and is concise without unnecessary repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "09": {
+      "grounding": {
+        "reason": "The information is not present in the course materials, and the agent appropriately states that it is not covered.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question asks for a lecture that does not exist in the course, and the agent correctly stays within the course scope by addressing it in relation to the course materials.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is unrelated to homework, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response is clear and concise, addressing the prompt directly.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "10": {
+      "grounding": {
+        "reason": "The answer uses the glossary definition for LoRA and correctly notes that weather information is outside the glossary.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The agent answers the course-related question on LoRA and correctly refuses the out-of-scope weather question.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question does not ask for homework help, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response directly addresses both parts of the prompt clearly and concisely without excessive repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    }
+  },
+  "summary": {
+    "n": 10,
+    "per_criterion": {
+      "grounding": {
+        "name": "Grounding",
+        "agree": 7,
+        "compared": 10,
+        "total": 10
+      },
+      "scope": {
+        "name": "Scope",
+        "agree": 9,
+        "compared": 10,
+        "total": 10
+      },
+      "hint": {
+        "name": "Hint",
+        "agree": 9,
+        "compared": 10,
+        "total": 10
+      },
+      "clarity": {
+        "name": "Clarity",
+        "agree": 7,
+        "compared": 10,
+        "total": 10
+      },
+      "lecture_mark": {
+        "name": "Lecture marker",
+        "agree": 1,
+        "compared": 10,
+        "total": 10
+      }
+    },
+    "overall": {
+      "agree": 1,
+      "compared": 10
+    },
+    "coverage": {
+      "covered": 10,
+      "total": 10
+    },
+    "review": [],
+    "mismatches": [
+      {
+        "id": "01",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The answer text provided is a set of criterion verdicts rather than an explanation of PEFT based on the glossary."
+      },
+      {
+        "id": "01",
+        "criterion": "clarity",
+        "name": "Clarity",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The user response formatting is structured, but let us evaluate the provided answer text if it were rendered. Since the user input provided the agent's evaluation string instead of the agent response, let's treat the text properly: the response is structured as an evaluation output rather than an answer, wait, the user's prompt contains the agent response as a serialized grading or answer. Let's check clarity: the text provided as the answer is actually the grader's output format or similar. Wait, the user prompt contains: 'grounding=CriterionVerdict(...) scope=CriterionVerdict(...) hint=CriterionVerdict(...) clarity=CriterionVerdict(...)'. This is not a proper answer text for a student/agent. Let's fail clarity and grounding if it doesn't answer the question, or pass if it's considered valid. Actually, let's look at the content: it contains reasons and verdicts. Therefore, it does not directly answer the question 'What is PEFT?'. Let's give fail for clarity and grounding due to incorrect output format/content."
+      },
+      {
+        "id": "01",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "02",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "03",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The answer did not actually interpret the typo 'harnes' as 'harness' using the glossary, but instead misformatted its output as a grading block."
+      },
+      {
+        "id": "03",
+        "criterion": "scope",
+        "name": "Scope",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The answer fails to provide a proper support response, instead outputting a grading string."
+      },
+      {
+        "id": "03",
+        "criterion": "hint",
+        "name": "Hint",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The answer fails to act as a proper agent response since it outputs grading metadata instead of answering the user."
+      },
+      {
+        "id": "03",
+        "criterion": "clarity",
+        "name": "Clarity",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The answer clearly evaluates the model output, but wait, the prompt asks me to grade the provided answer. The provided answer actually contains the grading block rather than a student response. Wait, let's look closer. The user prompt provides a question, an answer, and references. The answer given is formatted as a grading block (grounding=..., scope=...). Since this is a test case where the assistant or output format is evaluated, let's grade the provided answer text."
+      },
+      {
+        "id": "03",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "04",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The prompt evaluates a placeholder or artifact rather than providing a proper response to the glossary question."
+      },
+      {
+        "id": "04",
+        "criterion": "clarity",
+        "name": "Clarity",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The evaluation format contains internal evaluation artifacts rather than an actual answer to the student's question, so it fails clarity."
+      },
+      {
+        "id": "04",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "05",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "06",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "07",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "08",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "09",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      }
+    ]
+  }
+}
