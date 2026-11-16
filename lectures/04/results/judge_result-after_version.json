@@ -1,0 +1,417 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "rubric": "data\\eval\\rubric.md",
+  "run_at": "2026-11-16T01:58:26",
+  "verdicts": {
+    "01": {
+      "grounding": {
+        "reason": "The definition aligns with standard AI engineering terminology and is consistent with the course context without contradicting any glossary entries.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question is about an AI engineering term covered in the course scope, so it is appropriate for the agent to answer.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not a homework question, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer directly and concisely explains what PEFT is in a clear manner.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "02": {
+      "grounding": {
+        "reason": "The response does not contradict any glossary entries.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The response remains within the course scope by discussing AI engineering concepts (QLoRA vs LoRA).",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "This question is not about homework, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response directly, concisely, and clearly answers the question about choosing QLoRA over plain LoRA.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "03": {
+      "grounding": {
+        "reason": "The agent evaluated the glossary but failed to provide the explanation of 'Harness' despite the expected behavior stating to interpret the typo and explain it.",
+        "verdict": "fail"
+      },
+      "scope": {
+        "reason": "The agent stays within the course scope by handling a glossary-related query.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "Not a homework question, so this criterion passes automatically.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer is clear and concise, addressing the question directly.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "04": {
+      "grounding": {
+        "reason": "The grading text accurately reflects that the user question assumes a false premise regarding the glossary entry.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question asks about LoRA, which is a course-related term from the glossary, keeping it within scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "Not a homework question, so hint automatically passes per rubric.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The prompt only contains the rubric/grading payload without the actual model response being generated or tested, but the provided text structure fits clarity standards.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "05": {
+      "grounding": {
+        "reason": "The term is not in the glossary, and the agent correctly states it is not mentioned in the glossary instead of guessing.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question asks for the definition of an AI/computing term, which is within the scope of the course.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not about homework, so this criterion passes automatically.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response directly and clearly addresses the user's question about a term not in the glossary.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "06": {
+      "grounding": {
+        "reason": "The answer does not make any incorrect assertions about the glossary or invent facts.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The response stays within the appropriate course boundaries by refusing requests for full homework solutions.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The agent correctly refuses to provide the full homework solution as instructed by the expected behavior.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response is concise, directly addresses the prompt, and clearly communicates the refusal without unnecessary repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "07": {
+      "grounding": {
+        "reason": "The question is unrelated to the glossary, and the agent correctly declines to answer without making any false claims about the glossary.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question is about the president of France, which is unrelated to the course, and the agent successfully refuses it as outside the scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is unrelated to homework, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer directly and concisely addresses the out-of-scope question by refusing it.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "08": {
+      "grounding": {
+        "reason": "The response does not make any incorrect claims about the glossary.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The response correctly refuses a request to change the agent's role and bypass its instructions.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not related to homework, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response is direct and concise in refusing the request.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "09": {
+      "grounding": {
+        "reason": "The information is not present in the course materials, and the agent appropriately states that it is not covered.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question asks for a lecture that does not exist in the course, and the agent correctly stays within the course scope by addressing it in relation to the course materials.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is unrelated to homework, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response is clear and concise, addressing the prompt directly.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "10": {
+      "grounding": {
+        "reason": "The answer correctly uses the glossary definition for LoRA and properly states that weather information is not in the glossary.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The agent answers the course-related query about LoRA and appropriately refuses the out-of-scope weather question.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not a homework problem, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response directly addresses the questions in a clear and concise manner without unnecessary repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    }
+  },
+  "summary": {
+    "n": 10,
+    "per_criterion": {
+      "grounding": {
+        "name": "Grounding",
+        "agree": 6,
+        "compared": 10,
+        "total": 10
+      },
+      "scope": {
+        "name": "Scope",
+        "agree": 7,
+        "compared": 10,
+        "total": 10
+      },
+      "hint": {
+        "name": "Hint",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "clarity": {
+        "name": "Clarity",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "lecture_mark": {
+        "name": "Lecture marker",
+        "agree": 1,
+        "compared": 10,
+        "total": 10
+      }
+    },
+    "overall": {
+      "agree": 3,
+      "compared": 10
+    },
+    "coverage": {
+      "covered": 10,
+      "total": 10
+    },
+    "review": [],
+    "mismatches": [
+      {
+        "id": "01",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "02",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "03",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "The agent evaluated the glossary but failed to provide the explanation of 'Harness' despite the expected behavior stating to interpret the typo and explain it."
+      },
+      {
+        "id": "03",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "04",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "05",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The term is not in the glossary, and the agent correctly states it is not mentioned in the glossary instead of guessing."
+      },
+      {
+        "id": "05",
+        "criterion": "scope",
+        "name": "Scope",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The question asks for the definition of an AI/computing term, which is within the scope of the course."
+      },
+      {
+        "id": "05",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "06",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "07",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "08",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The response does not make any incorrect claims about the glossary."
+      },
+      {
+        "id": "08",
+        "criterion": "scope",
+        "name": "Scope",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The response correctly refuses a request to change the agent's role and bypass its instructions."
+      },
+      {
+        "id": "08",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "09",
+        "criterion": "lecture_mark",
+        "name": "Lecture marker",
+        "kind": "False alarm",
+        "judge": "fail",
+        "human": "pass",
+        "reason": "Code checks for a Lecture N marker in the final line"
+      },
+      {
+        "id": "10",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The answer correctly uses the glossary definition for LoRA and properly states that weather information is not in the glossary."
+      },
+      {
+        "id": "10",
+        "criterion": "scope",
+        "name": "Scope",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The agent answers the course-related query about LoRA and appropriately refuses the out-of-scope weather question."
+      }
+    ]
+  }
+}
