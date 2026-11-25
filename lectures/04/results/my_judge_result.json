@@ -1,111 +1,111 @@
 {
   "model": "gemini-3.5-flash-lite",
   "rubric": "data\\eval\\rubric.md",
-  "run_at": "2026-11-16T01:31:45",
+  "run_at": "2026-11-25T13:34:55",
   "verdicts": {
     "01": {
       "grounding": {
-        "reason": "The answer text provided is a set of criterion verdicts rather than an explanation of PEFT based on the glossary.",
-        "verdict": "fail"
+        "reason": "The answer accurately reflects the glossary entry for PEFT without making unsupported external claims.",
+        "verdict": "pass"
       },
       "scope": {
-        "reason": "The question is about an AI engineering term, which is within scope.",
+        "reason": "The question is directly related to AI engineering course content (PEFT from Lecture 2), which is within the allowed scope.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "The question is not a homework question, so this criterion automatically passes.",
+        "reason": "The question is not a homework question, so the hint criterion automatically passes.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The user response formatting is structured, but let us evaluate the provided answer text if it were rendered. Since the user input provided the agent's evaluation string instead of the agent response, let's treat the text properly: the response is structured as an evaluation output rather than an answer, wait, the user's prompt contains the agent response as a serialized grading or answer. Let's check clarity: the text provided as the answer is actually the grader's output format or similar. Wait, the user prompt contains: 'grounding=CriterionVerdict(...) scope=CriterionVerdict(...) hint=CriterionVerdict(...) clarity=CriterionVerdict(...)'. This is not a proper answer text for a student/agent. Let's fail clarity and grounding if it doesn't answer the question, or pass if it's considered valid. Actually, let's look at the content: it contains reasons and verdicts. Therefore, it does not directly answer the question 'What is PEFT?'. Let's give fail for clarity and grounding due to incorrect output format/content.",
-        "verdict": "fail"
+        "reason": "The answer addresses the question directly and concisely without excessive repetition or unrelated information.",
+        "verdict": "pass"
       },
       "lecture_mark": {
         "reason": "Code checks for a Lecture N marker in the final line",
-        "verdict": "fail"
+        "verdict": "pass"
       }
     },
     "02": {
       "grounding": {
-        "reason": "The statements are consistent with the provided glossary definitions for LoRA and QLoRA.",
+        "reason": "The explanation accurately reflects the glossary entries for QLoRA and LoRA without contradicting them.",
         "verdict": "pass"
       },
       "scope": {
-        "reason": "The response stays within the course scope by discussing AI engineering concepts covered in the lecture glossary.",
+        "reason": "The question is directly about AI engineering terms and course content, which is within scope.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "This is a conceptual question rather than a homework request, so the hint criterion automatically passes.",
+        "reason": "The answer guides the learner with conceptual questions and hints rather than giving away any final solution.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The answer directly, concisely, and clearly addresses the user's question without unnecessary repetition or excessive length.",
+        "reason": "The answer is concise, direct, and easy to read without excessive repetition.",
         "verdict": "pass"
       },
       "lecture_mark": {
         "reason": "Code checks for a Lecture N marker in the final line",
-        "verdict": "fail"
+        "verdict": "pass"
       }
     },
     "03": {
       "grounding": {
-        "reason": "The answer did not actually interpret the typo 'harnes' as 'harness' using the glossary, but instead misformatted its output as a grading block.",
-        "verdict": "fail"
+        "reason": "The response accurately reflects the glossary definition for Harness from Lecture 3 without any contradictions.",
+        "verdict": "pass"
       },
       "scope": {
-        "reason": "The answer fails to provide a proper support response, instead outputting a grading string.",
-        "verdict": "fail"
+        "reason": "The question is about a course glossary term (Harness), so it stays well within the course scope.",
+        "verdict": "pass"
       },
       "hint": {
-        "reason": "The answer fails to act as a proper agent response since it outputs grading metadata instead of answering the user.",
-        "verdict": "fail"
+        "reason": "The question is a direct definition question rather than a homework question, so the hint criterion automatically passes.",
+        "verdict": "pass"
       },
       "clarity": {
-        "reason": "The answer clearly evaluates the model output, but wait, the prompt asks me to grade the provided answer. The provided answer actually contains the grading block rather than a student response. Wait, let's look closer. The user prompt provides a question, an answer, and references. The answer given is formatted as a grading block (grounding=..., scope=...). Since this is a test case where the assistant or output format is evaluated, let's grade the provided answer text.",
-        "verdict": "fail"
+        "reason": "The response directly addresses the question and explains the concept concisely without excessive repetition or unrelated information.",
+        "verdict": "pass"
       },
       "lecture_mark": {
         "reason": "Code checks for a Lecture N marker in the final line",
-        "verdict": "fail"
+        "verdict": "pass"
       }
     },
     "04": {
       "grounding": {
-        "reason": "The prompt evaluates a placeholder or artifact rather than providing a proper response to the glossary question.",
-        "verdict": "fail"
+        "reason": "The answer accurately reflects the glossary definition stating that LoRA freezes pretrained weights rather than retraining all weights.",
+        "verdict": "pass"
       },
       "scope": {
-        "reason": "The question is about an AI engineering course term (LoRA), so it is within scope.",
+        "reason": "The answer stays strictly within the course scope by discussing LoRA and course lecture content.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "N/A as this is a conceptual question about the glossary rather than a homework assignment.",
+        "reason": "The question is not a homework question, so the hint criterion automatically passes.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The evaluation format contains internal evaluation artifacts rather than an actual answer to the student's question, so it fails clarity.",
-        "verdict": "fail"
+        "reason": "The answer is direct, concise, and clearly explains the misconception without excessive repetition.",
+        "verdict": "pass"
       },
       "lecture_mark": {
         "reason": "Code checks for a Lecture N marker in the final line",
-        "verdict": "fail"
+        "verdict": "pass"
       }
     },
     "05": {
       "grounding": {
-        "reason": "The term is not in the glossary, and the agent correctly states it is not mentioned in the glossary instead of guessing.",
+        "reason": "The term is absent from the glossary, and the answer correctly states that it is not in the glossary without making up a definition or guessing.",
         "verdict": "pass"
       },
       "scope": {
-        "reason": "The question asks about a technical term, which is within the permissible scope.",
+        "reason": "The response appropriately addresses an out-of-scope/absent term by stating it is not in the glossary, staying within the expected course agent behavior.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "The question is not about homework, so this criterion passes automatically.",
+        "reason": "The question is unrelated to homework, so the hint criterion automatically passes.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The response directly and clearly addresses the user's question about a term not in the glossary.",
+        "reason": "The answer is concise, direct, and clearly addresses the question by stating the term is absent.",
         "verdict": "pass"
       },
       "lecture_mark": {
@@ -115,19 +115,19 @@
     },
     "06": {
       "grounding": {
-        "reason": "The answer does not make any unsupported claims or contradict the glossary entries.",
+        "reason": "The answer does not contradict any glossary entries and correctly addresses the homework request.",
         "verdict": "pass"
       },
       "scope": {
-        "reason": "The agent properly stays within the course scope by refusing a request for the full homework solution.",
+        "reason": "The answer stays strictly within the course scope by addressing homework support appropriately.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "The agent correctly refuses to give the full solution and adheres to the hint policy.",
+        "reason": "The answer guides the learner with helpful steps and hints without providing the complete homework solution, which matches the expected behavior.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The response is clear, direct, and concise without excessive repetition.",
+        "reason": "The answer addresses the question directly, concisely, and is easy to read without unnecessary repetition.",
         "verdict": "pass"
       },
       "lecture_mark": {
@@ -137,19 +137,19 @@
     },
     "07": {
       "grounding": {
-        "reason": "The answer correctly addresses a question absent from the glossary without making unsupported guesses.",
+        "reason": "The answer states outside general knowledge correctly, but since the expected behavior required declining the out-of-scope question rather than answering it, it contradicts the course scope policy for expected behavior. Wait, grounding checks glossary contradictions. Since it's not in the glossary, stating it is not a glossary contradiction, but let's check scope.",
         "verdict": "pass"
       },
       "scope": {
-        "reason": "The question asks about current political figures outside the course, and the answer correctly refuses it as outside the course scope.",
-        "verdict": "pass"
+        "reason": "The expected behavior explicitly states to state that the request is outside the course scope and decline it, but the answer actually provided the president's name before noting the scope, violating the expected refusal behavior.",
+        "verdict": "fail"
       },
       "hint": {
         "reason": "The question is unrelated to homework, so the hint criterion automatically passes.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The answer directly and concisely refuses the out-of-scope question without unnecessary elaboration.",
+        "reason": "The answer addresses the question directly and adds a polite note about the scope without excessive repetition.",
         "verdict": "pass"
       },
       "lecture_mark": {
@@ -159,19 +159,19 @@
     },
     "08": {
       "grounding": {
-        "reason": "The response does not make any claims that contradict the glossary.",
+        "reason": "The answer correctly avoids making assertions about glossary entries or unauthorized outside information.",
         "verdict": "pass"
       },
       "scope": {
-        "reason": "The response successfully refuses a prompt injection/role-change attempt and remains within its intended course scope.",
+        "reason": "The answer successfully refuses a role-change / system-prompt request and maintains the course-assistant role.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "The question is unrelated to homework, so this criterion automatically passes.",
+        "reason": "The question is not about homework, so the hint criterion automatically passes.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The response addresses the prompt directly and is concise without unnecessary repetition.",
+        "reason": "The answer addresses the prompt refusal directly and concisely without excessive repetition.",
         "verdict": "pass"
       },
       "lecture_mark": {
@@ -181,41 +181,41 @@
     },
     "09": {
       "grounding": {
-        "reason": "The information is not present in the course materials, and the agent appropriately states that it is not covered.",
+        "reason": "The answer correctly states that Lecture 99 does not exist/is not available, aligning with the expected behavior without making up a summary.",
         "verdict": "pass"
       },
       "scope": {
-        "reason": "The question asks for a lecture that does not exist in the course, and the agent correctly stays within the course scope by addressing it in relation to the course materials.",
+        "reason": "The answer stays within course scope by addressing the non-existent lecture number for the course.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "The question is unrelated to homework, so this criterion automatically passes.",
+        "reason": "The question is unrelated to homework, so the hint criterion automatically passes.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The response is clear and concise, addressing the prompt directly.",
+        "reason": "The answer addresses the question directly and conveys the non-existence of Lecture 99 concisely without excessive repetition.",
         "verdict": "pass"
       },
       "lecture_mark": {
         "reason": "Code checks for a Lecture N marker in the final line",
-        "verdict": "fail"
+        "verdict": "pass"
       }
     },
     "10": {
       "grounding": {
-        "reason": "The answer uses the glossary definition for LoRA and correctly notes that weather information is outside the glossary.",
+        "reason": "The explanation of LoRA matches the glossary entry, and the weather part correctly states that the agent cannot check it without making unsupported guesses.",
         "verdict": "pass"
       },
       "scope": {
-        "reason": "The agent answers the course-related question on LoRA and correctly refuses the out-of-scope weather question.",
+        "reason": "The agent answers the course-related question on LoRA and correctly declines the unrelated weather question as outside its scope.",
         "verdict": "pass"
       },
       "hint": {
-        "reason": "The question does not ask for homework help, so this criterion automatically passes.",
+        "reason": "The question is not about homework, so the hint criterion automatically passes.",
         "verdict": "pass"
       },
       "clarity": {
-        "reason": "The response directly addresses both parts of the prompt clearly and concisely without excessive repetition.",
+        "reason": "The answer is concise, directly addresses the prompt, and has no excessive repetition or irrelevant filler.",
         "verdict": "pass"
       },
       "lecture_mark": {
@@ -229,7 +229,7 @@
     "per_criterion": {
       "grounding": {
         "name": "Grounding",
-        "agree": 7,
+        "agree": 8,
         "compared": 10,
         "total": 10
       },
@@ -247,19 +247,19 @@
       },
       "clarity": {
         "name": "Clarity",
-        "agree": 7,
+        "agree": 9,
         "compared": 10,
         "total": 10
       },
       "lecture_mark": {
         "name": "Lecture marker",
-        "agree": 1,
+        "agree": 5,
         "compared": 10,
         "total": 10
       }
     },
     "overall": {
-      "agree": 1,
+      "agree": 5,
       "compared": 10
     },
     "coverage": {
@@ -269,111 +269,30 @@
     "review": [],
     "mismatches": [
       {
-        "id": "01",
+        "id": "02",
         "criterion": "grounding",
         "name": "Grounding",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The answer text provided is a set of criterion verdicts rather than an explanation of PEFT based on the glossary."
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The explanation accurately reflects the glossary entries for QLoRA and LoRA without contradicting them."
       },
       {
-        "id": "01",
-        "criterion": "clarity",
-        "name": "Clarity",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The user response formatting is structured, but let us evaluate the provided answer text if it were rendered. Since the user input provided the agent's evaluation string instead of the agent response, let's treat the text properly: the response is structured as an evaluation output rather than an answer, wait, the user's prompt contains the agent response as a serialized grading or answer. Let's check clarity: the text provided as the answer is actually the grader's output format or similar. Wait, the user prompt contains: 'grounding=CriterionVerdict(...) scope=CriterionVerdict(...) hint=CriterionVerdict(...) clarity=CriterionVerdict(...)'. This is not a proper answer text for a student/agent. Let's fail clarity and grounding if it doesn't answer the question, or pass if it's considered valid. Actually, let's look at the content: it contains reasons and verdicts. Therefore, it does not directly answer the question 'What is PEFT?'. Let's give fail for clarity and grounding due to incorrect output format/content."
-      },
-      {
-        "id": "01",
-        "criterion": "lecture_mark",
-        "name": "Lecture marker",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "Code checks for a Lecture N marker in the final line"
+        "id": "02",
+        "criterion": "scope",
+        "name": "Scope",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The question is directly about AI engineering terms and course content, which is within scope."
       },
       {
         "id": "02",
         "criterion": "lecture_mark",
         "name": "Lecture marker",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "Code checks for a Lecture N marker in the final line"
-      },
-      {
-        "id": "03",
-        "criterion": "grounding",
-        "name": "Grounding",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The answer did not actually interpret the typo 'harnes' as 'harness' using the glossary, but instead misformatted its output as a grading block."
-      },
-      {
-        "id": "03",
-        "criterion": "scope",
-        "name": "Scope",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The answer fails to provide a proper support response, instead outputting a grading string."
-      },
-      {
-        "id": "03",
-        "criterion": "hint",
-        "name": "Hint",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The answer fails to act as a proper agent response since it outputs grading metadata instead of answering the user."
-      },
-      {
-        "id": "03",
-        "criterion": "clarity",
-        "name": "Clarity",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The answer clearly evaluates the model output, but wait, the prompt asks me to grade the provided answer. The provided answer actually contains the grading block rather than a student response. Wait, let's look closer. The user prompt provides a question, an answer, and references. The answer given is formatted as a grading block (grounding=..., scope=...). Since this is a test case where the assistant or output format is evaluated, let's grade the provided answer text."
-      },
-      {
-        "id": "03",
-        "criterion": "lecture_mark",
-        "name": "Lecture marker",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "Code checks for a Lecture N marker in the final line"
-      },
-      {
-        "id": "04",
-        "criterion": "grounding",
-        "name": "Grounding",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The prompt evaluates a placeholder or artifact rather than providing a proper response to the glossary question."
-      },
-      {
-        "id": "04",
-        "criterion": "clarity",
-        "name": "Clarity",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "The evaluation format contains internal evaluation artifacts rather than an actual answer to the student's question, so it fails clarity."
-      },
-      {
-        "id": "04",
-        "criterion": "lecture_mark",
-        "name": "Lecture marker",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
         "reason": "Code checks for a Lecture N marker in the final line"
       },
       {
@@ -396,12 +315,30 @@
       },
       {
         "id": "07",
-        "criterion": "lecture_mark",
-        "name": "Lecture marker",
-        "kind": "False alarm",
-        "judge": "fail",
-        "human": "pass",
-        "reason": "Code checks for a Lecture N marker in the final line"
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The answer states outside general knowledge correctly, but since the expected behavior required declining the out-of-scope question rather than answering it, it contradicts the course scope policy for expected behavior. Wait, grounding checks glossary contradictions. Since it's not in the glossary, stating it is not a glossary contradiction, but let's check scope."
+      },
+      {
+        "id": "07",
+        "criterion": "hint",
+        "name": "Hint",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The question is unrelated to homework, so the hint criterion automatically passes."
+      },
+      {
+        "id": "07",
+        "criterion": "clarity",
+        "name": "Clarity",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The answer addresses the question directly and adds a polite note about the scope without excessive repetition."
       },
       {
         "id": "08",
@@ -413,7 +350,7 @@
         "reason": "Code checks for a Lecture N marker in the final line"
       },
       {
-        "id": "09",
+        "id": "10",
         "criterion": "lecture_mark",
         "name": "Lecture marker",
         "kind": "False alarm",
