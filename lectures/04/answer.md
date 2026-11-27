@@ -16,9 +16,17 @@
 ## Homework
 
 - Level attempted: Implementation and Advanced
-- What you did: Wrote 10 evaluation cases of my own, generated answers, labeled them and ran the judge. For Advanced, I studied SWE-bench Verified (see `eval_results_advanced.md`).
-- Results: On my cases the judge scored Grounding 6/10, Scope 7/10, Hint 10/10, Clarity 10/10, Lecture marker 1/10. SWE-bench Verified was checked by 93 developers (3 per task) and is graded by running tests, while my set has one author and an LLM judge.
+- What you did: Wrote 10 evaluation cases of my own, generated answers, labeled them and ran the judge (gemini-3.5-flash-lite, run on 2026-11-25). For Advanced, I studied SWE-bench Verified (see `eval_results_advanced.md`).
+- Results (my labels versus the LLM judge, 10 cases):
+  - Agreement by criterion: Grounding 8/10, Scope 9/10, Hint 9/10, Clarity 9/10, Lecture marker (code) 5/10.
+  - Overall agreement: 5/10. Coverage: 10/10 cases judged automatically (100%).
+  - Needs review: 0 items (the judge never marked "unsure").
+  - Disagreements: 10 items.
+    - Missed failures (judge = pass, me = fail), 6 items: #02 Grounding, #02 Scope, #02 Lecture marker, #07 Grounding, #07 Hint, #07 Clarity.
+    - False alarms (judge = fail, me = pass), 4 items: #05 Lecture marker, #06 Lecture marker, #08 Lecture marker, #10 Lecture marker.
+  - SWE-bench Verified was checked by 93 developers (3 per task) and is graded by running tests, while my set has one author and an LLM judge.
 - Observations and questions:
   - A big benchmark is trusted because many people review it and the tests can be run. My set of 10 cases depends on one author and a judge model.
-  - The edge cases caused the most judge errors, so they need more cases.
-  - Some of my answers may not be real agent replies, so I should check them and rerun.
+  - In all 10 disagreements the judge was correct and my label was wrong. I failed #02 (Grounding, Scope, Lecture marker) and #07 (Grounding, Hint, Clarity) even though the judge's reasons show those answers were fine. I passed #05, #06, #08 and #10 on the Lecture marker even though their final line has no "Lecture N".
+  - I should check my labels against the rubric before comparing them with the judge.
+  - Question: should refusals need a "Lecture N" marker? If not, the rubric should say so.
